@@ -1,6 +1,6 @@
 module "vpc" {
-  source = "app.terraform.io/juyi-training/vpc/aws"
+  source = "terraform-aws-modules/vpc/aws"
 
-  name = "hashicat"
-  cidr = "10.0.0.0/16"
+  create_vpc = false
+  # ... omitted
 }
