@@ -3,14 +3,14 @@ provider "aws" {
   region  = var.region
 }
 
-resource aws_vpc "hashicat" {
-  cidr_block           = var.address_space
-  enable_dns_hostnames = true
+#resource aws_vpc "hashicat" {
+#  cidr_block           = var.address_space
+#  enable_dns_hostnames = true
 
-  tags = {
-    name = "${var.prefix}-vpc"
-  }
-}
+#  tags = {
+#    name = "${var.prefix}-vpc"
+#  }
+#}
 
 resource aws_subnet "hashicat" {
   vpc_id     = aws_vpc.hashicat.id
